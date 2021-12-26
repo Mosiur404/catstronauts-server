@@ -33,7 +33,8 @@ const typeDefs = gql`
     "The tracks image to dispaly on card"
     thumbnail: String
     "The tracks length to complete, in minutes"
-    length: Int
+    length: Int @deprecated(reason: "use durationInSeconds")
+    durationInSeconds: Int
     "The tracks modules this track contains"
     modulesCount: Int
     "the complete description"
@@ -49,7 +50,8 @@ const typeDefs = gql`
     "the modules title"
     title: String!
     "the modules time taken in minutes"
-    length: Int
+    length: Int @deprecated(reason: "use durationInSeconds")
+    durationInSeconds: Int
     "the content of module"
     content: String
     "the url of the video"
